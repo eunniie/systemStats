@@ -12,9 +12,9 @@ This application is used to display the real-time system statistics of a Linux m
 
 # To run the program:
 1) Compile the program by typing the 'make' command
-2) Run the executable that was created, with flags if wanted
-      eg. Without flags: ./systemStats
-      eg. With flags: ./systemStats --system --graphics
+2) Run the executable that was created, with flags if wanted \
+      -- eg. Without flags: ./systemStats \
+      -- eg. With flags: ./systemStats --system --graphics
 
 # Optional flags:
 | Flag     | Description |
