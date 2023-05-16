@@ -16,33 +16,28 @@ This application is used to display the real-time system statistics of a Linux m
       eg. Without flags: ./systemStats
       eg. With flags: ./systemStats --system --graphics
 
-Optional flags:
---system        |Only generate system usage
+# Optional flags:
+| Flag     | Description |
+| ----------- | ----------- |
+| --system      | Only generate system usage|
+| --user    | Only generate user usage|
+| --graphics    | Generate graphics|
+| --sequential    | Output data sequentially|
+| --samples=N     | N is an integer that indicates how many samples are going to be taken and displayed|
+| --tdealy=T    | T is an integer that indicates the amount of time (in seconds) that passes  between each data output|
 
---user          |Only generate user usage
-
---graphics      |Generate graphics
-
---sequential    |Output data sequentially
-
---samples=N     |N is an integer that indicates how many samples are going to be taken and displayed
-
---tdealy=T      |T is an integer that indicates the amount of time (in seconds) that passes  between each data output
-
-Positional arguments:
+# Positional arguments:
 --samples=N and --tdealy=T can be used as positional arguments if no flag is indicated in the corresponding order:N T
 Positional arguments must be specified as the FIRST arguments.
-
 
 Default (no flags): 10 samples of system usage and user usage will be displayed non-sequentially, without graphics. 
                     There will be a 1 second delay between each sample.
 
-CLA Misusages: 
-            For --tdelay=T and --samples=N, T and N MUST be integers.
-            T and N should NOT be set more than once.
+# CLA Misusages: 
+For --tdelay=T and --samples=N, T and N MUST be integers.
 
-            For positional arguments, N and T are expected as the FIRST arguments in that EXACT order. If they are located anywhere else, it 
-            would not be considered a valid positional argument. Below are some examples:
-            ./systemStats 100                  will set N to 100
-            ./systemStats --user 4             will be invalid because 4 is not the first argument
+For positional arguments, N and T are expected as the FIRST arguments in that EXACT order. If they are located anywhere else, it 
+would not be considered a valid positional argument. Below are some examples:
+- ./systemStats 100: will set N to 100
+- ./systemStats --user 4:  will be invalid because 4 is not the first argument
 
